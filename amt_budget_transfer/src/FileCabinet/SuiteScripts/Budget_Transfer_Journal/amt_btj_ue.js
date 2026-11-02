@@ -82,12 +82,15 @@ define(['./amt_btj_lib', 'N/runtime', 'N/error'], (lib, runtime, error) => {
             file: newRec.getValue({ fieldId: 'custrecord_amt_btj_file' })
         };
 
-        const validation = lib.validateTransfer(header, lines, false);
-        if (!validation.isValid) {
-            throw error.create({
-                name: 'AMT_BTJ_VALIDATION_FAILED',
-                message: validation.errors.join(' | ')
-            });
+        // Skip full validation on empty Draft saves (no lines yet)
+        if (lines.length > 0) {
+            const validation = lib.validateTransfer(header, lines, false);
+            if (!validation.isValid) {
+                throw error.create({
+                    name: 'AMT_BTJ_VALIDATION_FAILED',
+                    message: validation.errors.join(' | ')
+                });
+            }
         }
     }
 

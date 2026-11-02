@@ -104,6 +104,13 @@ define(['./amt_btj_lib', './amt_btj_budget', 'N/ui/dialog'], (lib, budgetLib, di
         const currRec = context.currentRecord;
         recalcTotals(currRec);
 
+        const config = lib.loadConfig();
+        const lineCount = currRec.getLineCount({ sublistId: config.lineSublist });
+
+        // Allow saving an empty Draft (no lines yet or sublist not rendered on create)
+        // Note: NetSuite returns -1 if the sublist is not present on the current form mode.
+        if (lineCount <= 0) return true;
+
         const totalInc = parseFloat(currRec.getValue({ fieldId: 'custrecord_amt_btj_total_inc' }) || 0);
         const totalDec = parseFloat(currRec.getValue({ fieldId: 'custrecord_amt_btj_total_dec' }) || 0);
 
