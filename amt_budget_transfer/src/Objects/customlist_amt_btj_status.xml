@@ -1,0 +1,35 @@
+<customlist scriptid="customlist_amt_btj_status">
+    <description>Status of a Budget Transfer; set by workflow and posting script</description>
+    <isinactive>F</isinactive>
+    <name>Budget Transfer Status</name>
+    <customvalues>
+        <customvalue scriptid="val_amt_btj_draft">
+            <isinactive>F</isinactive>
+            <value>Draft</value>
+        </customvalue>
+        <customvalue scriptid="val_amt_btj_pending">
+            <isinactive>F</isinactive>
+            <value>Pending Approval</value>
+        </customvalue>
+        <customvalue scriptid="val_amt_btj_approved">
+            <isinactive>F</isinactive>
+            <value>Approved</value>
+        </customvalue>
+        <customvalue scriptid="val_amt_btj_posted">
+            <isinactive>F</isinactive>
+            <value>Posted</value>
+        </customvalue>
+        <customvalue scriptid="val_amt_btj_rejected">
+            <isinactive>F</isinactive>
+            <value>Rejected</value>
+        </customvalue>
+        <customvalue scriptid="val_amt_btj_error">
+            <isinactive>F</isinactive>
+            <value>Error</value>
+        </customvalue>
+        <customvalue scriptid="val_amt_btj_reversed">
+            <isinactive>F</isinactive>
+            <value>Reversed</value>
+        </customvalue>
+    </customvalues>
+</customlist>

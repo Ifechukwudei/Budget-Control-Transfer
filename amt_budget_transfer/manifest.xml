@@ -1,0 +1,12 @@
+<manifest projecttype="ACCOUNTCUSTOMIZATION">
+    <projectname>amt_budget_transfer</projectname>
+    <frameworkversion>1.0</frameworkversion>
+    <dependencies>
+        <features>
+            <feature required="true">CUSTOMRECORDS</feature>
+            <feature required="true">CUSTOMTRANSACTIONS</feature>
+            <feature required="true">SERVERSIDESCRIPTING</feature>
+            <feature required="true">WORKFLOW</feature>
+        </features>
+    </dependencies>
+</manifest>

@@ -1,0 +1,193 @@
+<customrecordtype scriptid="customrecord_amt_btj_setup">
+    <accesstype>USEPERMISSIONLIST</accesstype>
+    <allowattachments>F</allowattachments>
+    <allowinlinedeleting>F</allowinlinedeleting>
+    <allowinlinedetaching>F</allowinlinedetaching>
+    <allowinlineediting>F</allowinlineediting>
+    <allowmobileaccess>F</allowmobileaccess>
+    <allownumberingoverride>F</allownumberingoverride>
+    <allowquickadd>F</allowquickadd>
+    <allowquicksearch>T</allowquicksearch>
+    <allowuiaccess>T</allowuiaccess>
+    <description>Approver setup per subsidiary for Budget Transfer Journal</description>
+    <enablenametranslation>F</enablenametranslation>
+    <enablenumbering>F</enablenumbering>
+    <enableoptimisticlocking>T</enableoptimisticlocking>
+    <enablesystemnotes>T</enablesystemnotes>
+    <hierarchical>F</hierarchical>
+    <icon></icon>
+    <iconbuiltin>T</iconbuiltin>
+    <iconlist></iconlist>
+    <includeinsearchmenu>T</includeinsearchmenu>
+    <includename>T</includename>
+    <isinactive>F</isinactive>
+    <isordered>F</isordered>
+    <recordname>Budget Transfer Approval Setup</recordname>
+    <showcreationdate>F</showcreationdate>
+    <showcreationdateonlist>F</showcreationdateonlist>
+    <showid>T</showid>
+    <showlastmodified>F</showlastmodified>
+    <showlastmodifiedonlist>F</showlastmodifiedonlist>
+    <shownotes>T</shownotes>
+    <showowner>F</showowner>
+    <showowneronlist>F</showowneronlist>
+    <customrecordcustomfields>
+        <customrecordcustomfield scriptid="custrecord_amt_btjs_subsidiary">
+            <accesslevel>2</accesslevel>
+            <applyformatting>F</applyformatting>
+            <checkspelling>F</checkspelling>
+            <defaultchecked>F</defaultchecked>
+            <defaultselection></defaultselection>
+            <defaultvalue></defaultvalue>
+            <description>Subsidiary for this approval setup</description>
+            <displayheight></displayheight>
+            <displaytype>NORMAL</displaytype>
+            <displaywidth></displaywidth>
+            <dynamicdefault></dynamicdefault>
+            <encryptatrest>F</encryptatrest>
+            <fieldtype>SELECT</fieldtype>
+            <globalsearch>F</globalsearch>
+            <help>Subsidiary for which these approver rules apply.</help>
+            <isformula>F</isformula>
+            <ismandatory>T</ismandatory>
+            <isparent>F</isparent>
+            <label>Subsidiary</label>
+            <onparentdelete>NO_ACTION</onparentdelete>
+            <parentsubtab></parentsubtab>
+            <searchdefault></searchdefault>
+            <selectrecordtype>-117</selectrecordtype>
+            <showinlist>T</showinlist>
+            <sourcefilterby></sourcefilterby>
+            <sourcefrom></sourcefrom>
+            <sourcelist></sourcelist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjs_approver">
+            <accesslevel>2</accesslevel>
+            <applyformatting>F</applyformatting>
+            <checkspelling>F</checkspelling>
+            <defaultchecked>F</defaultchecked>
+            <defaultselection></defaultselection>
+            <defaultvalue></defaultvalue>
+            <description>Primary Senior Manager approver</description>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <globalsearch>F</globalsearch>
+            <help>Select the Senior Manager responsible for approving transfers.</help>
+            <isformula>F</isformula>
+            <ismandatory>T</ismandatory>
+            <isparent>F</isparent>
+            <label>Senior Manager</label>
+            <onparentdelete>NO_ACTION</onparentdelete>
+            <selectrecordtype>-4</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjs_backup">
+            <accesslevel>2</accesslevel>
+            <applyformatting>F</applyformatting>
+            <checkspelling>F</checkspelling>
+            <defaultchecked>F</defaultchecked>
+            <defaultselection></defaultselection>
+            <defaultvalue></defaultvalue>
+            <description>Backup approver when Senior Manager is away</description>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <globalsearch>F</globalsearch>
+            <help>Approves transfers when the Senior Manager raised the transfer or when Use Backup is enabled.</help>
+            <isformula>F</isformula>
+            <ismandatory>F</ismandatory>
+            <isparent>F</isparent>
+            <label>Backup Approver</label>
+            <onparentdelete>NO_ACTION</onparentdelete>
+            <selectrecordtype>-4</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjs_use_backup">
+            <accesslevel>2</accesslevel>
+            <applyformatting>F</applyformatting>
+            <checkspelling>F</checkspelling>
+            <defaultchecked>F</defaultchecked>
+            <defaultselection></defaultselection>
+            <defaultvalue></defaultvalue>
+            <description>Route submissions to the Backup Approver</description>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>CHECKBOX</fieldtype>
+            <globalsearch>F</globalsearch>
+            <help>Tick while the Senior Manager is away; new submissions go to the backup.</help>
+            <isformula>F</isformula>
+            <ismandatory>F</ismandatory>
+            <isparent>F</isparent>
+            <label>Use Backup</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjs_gm_on">
+            <accesslevel>2</accesslevel>
+            <applyformatting>F</applyformatting>
+            <checkspelling>F</checkspelling>
+            <defaultchecked>F</defaultchecked>
+            <defaultselection></defaultselection>
+            <defaultvalue></defaultvalue>
+            <description>Enable GM approval requirement above threshold</description>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>CHECKBOX</fieldtype>
+            <globalsearch>F</globalsearch>
+            <help>Tick to enforce General Manager approval when transfer decrease exceeds the GM Threshold.</help>
+            <isformula>F</isformula>
+            <ismandatory>F</ismandatory>
+            <isparent>F</isparent>
+            <label>GM Approval</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjs_gm">
+            <accesslevel>2</accesslevel>
+            <applyformatting>F</applyformatting>
+            <checkspelling>F</checkspelling>
+            <defaultchecked>F</defaultchecked>
+            <defaultselection></defaultselection>
+            <defaultvalue></defaultvalue>
+            <description>General Manager approver</description>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <globalsearch>F</globalsearch>
+            <help>General Manager employee record.</help>
+            <isformula>F</isformula>
+            <ismandatory>F</ismandatory>
+            <isparent>F</isparent>
+            <label>GM</label>
+            <onparentdelete>NO_ACTION</onparentdelete>
+            <selectrecordtype>-4</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjs_gm_threshold">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <checkspelling>F</checkspelling>
+            <defaultchecked>F</defaultchecked>
+            <defaultselection></defaultselection>
+            <defaultvalue></defaultvalue>
+            <description>Amount threshold above which GM approval applies</description>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <globalsearch>F</globalsearch>
+            <help>GM approval triggers when Total Decrease exceeds this amount.</help>
+            <isformula>F</isformula>
+            <ismandatory>F</ismandatory>
+            <isparent>F</isparent>
+            <label>GM Threshold</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+    </customrecordcustomfields>
+    <permissions>
+        <permission>
+            <filerestriction></filerestriction>
+            <permittedlevel>FULL</permittedlevel>
+            <permittedrole>ADMINISTRATOR</permittedrole>
+        </permission>
+    </permissions>
+</customrecordtype>

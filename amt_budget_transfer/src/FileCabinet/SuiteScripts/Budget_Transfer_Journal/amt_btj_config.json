@@ -1,0 +1,30 @@
+{
+  "budgetRecord": {
+    "type": "customtransaction_bm_budget_transaction",
+    "subsidiary": "subsidiary",
+    "department": "department",
+    "account": "account",
+    "project": "custcol_bm_customer",
+    "year": "custbody_bm_financial_year",
+    "inactive": "isinactive",
+    "original": "custcol_amt_bud_original",
+    "transfers": "custcol_amt_bud_transfers",
+    "current": "custcol_amt_bud_current"
+  },
+  "useProject": false,
+  "uploadEnabled": true,
+  "uploadMaxRows": 500,
+  "lineSublist": "recmachcustrecord_amt_btjl_parent",
+  "status": {
+    "draft": "val_amt_btj_draft",
+    "pending": "val_amt_btj_pending",
+    "approved": "val_amt_btj_approved",
+    "posted": "val_amt_btj_posted",
+    "rejected": "val_amt_btj_rejected",
+    "error": "val_amt_btj_error",
+    "reversed": "val_amt_btj_reversed"
+  },
+  "budgetControlledAccounts": "",
+  "lockCacheName": "AMT_BTJ_LOCK",
+  "lockSeconds": 300
+}

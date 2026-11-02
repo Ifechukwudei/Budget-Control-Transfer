@@ -1,0 +1,18 @@
+<deploy>
+    <files>
+        <path>~/FileCabinet/SuiteScripts/Budget_Transfer_Journal/amt_btj_config.json</path>
+        <path>~/FileCabinet/SuiteScripts/Budget_Transfer_Journal/amt_btj_lib.js</path>
+        <path>~/FileCabinet/SuiteScripts/Budget_Transfer_Journal/amt_btj_budget.js</path>
+        <path>~/FileCabinet/SuiteScripts/Budget_Transfer_Journal/amt_btj_cs.js</path>
+        <path>~/FileCabinet/SuiteScripts/Budget_Transfer_Journal/amt_btj_ue.js</path>
+        <path>~/FileCabinet/SuiteScripts/Budget_Transfer_Journal/amt_btj_wfa.js</path>
+        <path>~/FileCabinet/SuiteScripts/Budget_Transfer_Journal/amt_btj_post_mr.js</path>
+        <path>~/FileCabinet/SuiteScripts/Budget_Transfer_Journal/amt_btj_bud_ue.js</path>
+    </files>
+    <objects>
+        <path>~/Objects/customlist_amt_btj_status.xml</path>
+        <path>~/Objects/customrecord_amt_btj_setup.xml</path>
+        <path>~/Objects/customrecord_amt_btj.xml</path>
+        <path>~/Objects/customrecord_amt_btj_line.xml</path>
+    </objects>
+</deploy>

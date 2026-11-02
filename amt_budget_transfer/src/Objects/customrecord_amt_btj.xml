@@ -1,0 +1,184 @@
+<customrecordtype scriptid="customrecord_amt_btj">
+    <accesstype>USEPERMISSIONLIST</accesstype>
+    <allowattachments>T</allowattachments>
+    <allowinlinedeleting>F</allowinlinedeleting>
+    <allowinlinedetaching>F</allowinlinedetaching>
+    <allowinlineediting>F</allowinlineediting>
+    <allowmobileaccess>F</allowmobileaccess>
+    <allownumberingoverride>F</allownumberingoverride>
+    <allowquickadd>F</allowquickadd>
+    <allowquicksearch>T</allowquicksearch>
+    <allowuiaccess>T</allowuiaccess>
+    <description>Budget Transfer Journal header</description>
+    <enablenumbering>T</enablenumbering>
+    <enableoptimisticlocking>T</enableoptimisticlocking>
+    <enablesystemnotes>T</enablesystemnotes>
+    <hierarchical>F</hierarchical>
+    <includeinsearchmenu>T</includeinsearchmenu>
+    <includename>F</includename>
+    <isinactive>F</isinactive>
+    <isordered>F</isordered>
+    <numberinginit>1</numberinginit>
+    <numberingmindigits>5</numberingmindigits>
+    <numberingprefix>BTJ</numberingprefix>
+    <numberingsuffix></numberingsuffix>
+    <recordname>Budget Transfer</recordname>
+    <showcreationdate>T</showcreationdate>
+    <showcreationdateonlist>T</showcreationdateonlist>
+    <showid>T</showid>
+    <showlastmodified>T</showlastmodified>
+    <showlastmodifiedonlist>T</showlastmodifiedonlist>
+    <shownotes>T</shownotes>
+    <showowner>F</showowner>
+    <showowneronlist>F</showowneronlist>
+    <subtabs>
+        <subtab scriptid="tab_amt_btj_lines">
+            <tabtitle>Lines</tabtitle>
+        </subtab>
+        <subtab scriptid="tab_amt_btj_posting">
+            <tabtitle>Posting</tabtitle>
+        </subtab>
+    </subtabs>
+    <customrecordcustomfields>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_subsidiary">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>T</ismandatory>
+            <label>Subsidiary</label>
+            <selectrecordtype>-117</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_year">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>T</ismandatory>
+            <label>Budget Year</label>
+            <selectrecordtype>-105</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_date">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>DATE</fieldtype>
+            <ismandatory>T</ismandatory>
+            <label>Transfer Date</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_justification">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>CLOBTEXT</fieldtype>
+            <ismandatory>T</ismandatory>
+            <label>Justification</label>
+            <showinlist>F</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_file">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>DOCUMENT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Supporting Memo</label>
+            <showinlist>F</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_status">
+            <accesslevel>2</accesslevel>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Status</label>
+            <selectrecordtype>[scriptid=customlist_amt_btj_status]</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_total_inc">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Total Increase</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_total_dec">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Total Decrease</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_requestor">
+            <accesslevel>2</accesslevel>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Requested By</label>
+            <selectrecordtype>-4</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_next_approver">
+            <accesslevel>2</accesslevel>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Next Approver</label>
+            <selectrecordtype>-4</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_reject_reason">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>CLOBTEXT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Rejection Reason</label>
+            <showinlist>F</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_posted_on">
+            <accesslevel>2</accesslevel>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>DATETIMETZ</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Posted On</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_reverses">
+            <accesslevel>2</accesslevel>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Reverses</label>
+            <selectrecordtype>[scriptid=customrecord_amt_btj]</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btj_error">
+            <accesslevel>2</accesslevel>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CLOBTEXT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Posting Error</label>
+            <showinlist>F</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+    </customrecordcustomfields>
+    <permissions>
+        <permission>
+            <permittedlevel>FULL</permittedlevel>
+            <permittedrole>ADMINISTRATOR</permittedrole>
+        </permission>
+    </permissions>
+</customrecordtype>

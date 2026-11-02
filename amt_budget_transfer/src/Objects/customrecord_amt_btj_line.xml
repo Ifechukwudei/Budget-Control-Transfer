@@ -1,0 +1,178 @@
+<customrecordtype scriptid="customrecord_amt_btj_line">
+    <accesstype>USEPERMISSIONLIST</accesstype>
+    <allowattachments>F</allowattachments>
+    <allowinlinedeleting>F</allowinlinedeleting>
+    <allowinlinedetaching>F</allowinlinedetaching>
+    <allowinlineediting>F</allowinlineediting>
+    <allowmobileaccess>F</allowmobileaccess>
+    <allownumberingoverride>F</allownumberingoverride>
+    <allowquickadd>F</allowquickadd>
+    <allowquicksearch>T</allowquicksearch>
+    <allowuiaccess>T</allowuiaccess>
+    <description>Budget Transfer Line item</description>
+    <enablenumbering>F</enablenumbering>
+    <enableoptimisticlocking>T</enableoptimisticlocking>
+    <enablesystemnotes>T</enablesystemnotes>
+    <hierarchical>F</hierarchical>
+    <includeinsearchmenu>T</includeinsearchmenu>
+    <includename>F</includename>
+    <isinactive>F</isinactive>
+    <isordered>F</isordered>
+    <recordname>Budget Transfer Line</recordname>
+    <showcreationdate>F</showcreationdate>
+    <showcreationdateonlist>F</showcreationdateonlist>
+    <showid>T</showid>
+    <showlastmodified>F</showlastmodified>
+    <showlastmodifiedonlist>F</showlastmodifiedonlist>
+    <shownotes>F</shownotes>
+    <showowner>F</showowner>
+    <showowneronlist>F</showowneronlist>
+    <customrecordcustomfields>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_parent">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>T</ismandatory>
+            <isparent>T</isparent>
+            <label>Transfer</label>
+            <onparentdelete>NO_ACTION</onparentdelete>
+            <parentsubtab>[scriptid=customrecord_amt_btj.tab_amt_btj_lines]</parentsubtab>
+            <selectrecordtype>[scriptid=customrecord_amt_btj]</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_department">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>T</ismandatory>
+            <label>Department</label>
+            <selectrecordtype>-102</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_account">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>T</ismandatory>
+            <label>Account</label>
+            <selectrecordtype>-112</selectrecordtype>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_project">
+            <accesslevel>2</accesslevel>
+            <displaytype>HIDDEN</displaytype>
+            <fieldtype>SELECT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Project</label>
+            <selectrecordtype>-7</selectrecordtype>
+            <showinlist>F</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_increase">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Increase</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_decrease">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Decrease</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_original">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Original Budget</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_current">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Current Budget</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_available">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Funds Available</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_budget_ref">
+            <accesslevel>2</accesslevel>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>INTEGER</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Budget Record</label>
+            <showinlist>F</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_before">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Transfers Before</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_after">
+            <accesslevel>2</accesslevel>
+            <applyformatting>T</applyformatting>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CURRENCY</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Transfers After</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_posted">
+            <accesslevel>2</accesslevel>
+            <displaytype>STATICTEXT</displaytype>
+            <fieldtype>CHECKBOX</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Posted</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+        <customrecordcustomfield scriptid="custrecord_amt_btjl_memo">
+            <accesslevel>2</accesslevel>
+            <displaytype>NORMAL</displaytype>
+            <fieldtype>TEXT</fieldtype>
+            <ismandatory>F</ismandatory>
+            <label>Memo</label>
+            <showinlist>T</showinlist>
+            <storevalue>T</storevalue>
+        </customrecordcustomfield>
+    </customrecordcustomfields>
+    <permissions>
+        <permission>
+            <permittedlevel>FULL</permittedlevel>
+            <permittedrole>ADMINISTRATOR</permittedrole>
+        </permission>
+    </permissions>
+</customrecordtype>
