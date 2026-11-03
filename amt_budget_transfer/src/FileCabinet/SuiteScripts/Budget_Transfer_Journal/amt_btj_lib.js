@@ -21,12 +21,15 @@ define(['N/log'], (log) => {
     const STATIC_CONFIG = {
         budgetRecord: {
             type: 'customtransaction_bm_budget_transaction',
+            lineSublist: 'line',
             subsidiary: 'subsidiary',
             department: 'department',
             account: 'account',
             project: 'custcol_bm_customer',
-            year: 'custbody_bm_financial_year',
-            inactive: 'isinactive',
+            activeVersion: 'custbody_bm_budget_current',
+            startDate: 'custcol_bm_start_date',
+            endDate: 'custcol_bm_end_date',
+            amount: 'amount',
             original: 'custcol_amt_bud_original',
             transfers: 'custcol_amt_bud_transfers',
             current: 'custcol_amt_bud_current'
@@ -80,6 +83,14 @@ define(['N/log'], (log) => {
      */
     function setConfig(cfg) {
         cachedConfig = cfg;
+    }
+
+    /**
+     * Returns the inlined static config so client scripts can call
+     * setConfig(getStaticConfig()) and never touch N/file.
+     */
+    function getStaticConfig() {
+        return STATIC_CONFIG;
     }
 
     /**
@@ -174,6 +185,7 @@ define(['N/log'], (log) => {
     return {
         loadConfig,
         setConfig,
+        getStaticConfig,
         calculateTotals,
         validateTransfer
     };
